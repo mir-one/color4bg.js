@@ -10,6 +10,7 @@ import { RandomCubesBg } from "../build/jsm/RandomCubesBg.module.js"
 import { TrianglesMosaicBg } from "../build/jsm/TrianglesMosaicBg.module.js"
 import { WavyWavesBg } from "../build/jsm/WavyWavesBg.module.js"
 import { GridArrayBg } from "../build/jsm/GridArrayBg.module.js"
+import { SwirlingCurvesBg } from "../build/jsm/SwirlingCurvesBg.module.js"
 import { StepGradientBg } from "../src/color4bg/AbstractBackground/StepGradientBg.js"
 
 const Colors = {
@@ -70,6 +71,11 @@ const Bgs = [
 	{
 		name: "random-cubes",
 		class: RandomCubesBg,
+		palette: "pastelglossy"
+	},
+	{
+		name: "swirling-curves",
+		class: SwirlingCurvesBg,
 		palette: "pastelglossy"
 	},
 	{
@@ -315,6 +321,44 @@ const Options = {
 		}
 	],
 	"random-cubes": [],
+	"swirling-curves": [
+		{
+			type: "range",
+			name: "noise",
+			display: "Noise",
+			min: 0.0,
+			max: 0.5,
+			step: 0.01,
+			value: 0.1
+		},
+		{
+			type: "range",
+			name: "speed",
+			display: "Speed",
+			min: 0.1,
+			max: 5,
+			step: 0.01,
+			value: 0.1
+		},
+		{
+			type: "range",
+			name: "density",
+			display: "Density",
+			min: 100,
+			max: 2000,
+			step: 100,
+			value: 1500
+		},
+		{
+			type: "range",
+			name: "scale",
+			display: "Scale",
+			min: 0.1,
+			max: 50,
+			step: 0.1,
+			value: 8.0
+		}
+	],
 	"swirling-curves": [
 		{
 			type: "range",
